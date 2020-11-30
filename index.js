@@ -19,7 +19,6 @@ const imagesContainer = document.getElementById('img-slider')
 photos.forEach((url, index) => {
     imagesContainer.innerHTML += `<div id="img_${index}" class="images ${index === 0 ? 'active' : ''}" style="background-image: url(${url})"></div>`
     miniesContainer.innerHTML += `<div onclick="choosePhoto(${index})" id="img_mini_${index}" class="mini_img ${index === 0 ? 'active' : ''}" style="background: no-repeat center / cover url(${url})"></div>`
-
 })
 
 function nextPhoto() {
@@ -43,6 +42,3 @@ function choosePhoto(index) {
 document.querySelectorAll(".arrow").forEach(elem => {
     elem.addEventListener('click', nextPhoto)
 })
-
-
-document.addEventListener('DOMContentLoaded', ()=>console.dir(miniesContainer))
